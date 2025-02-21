@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPrint</title>
+    <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/style/style.css">
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/projects.css">
+    <link rel="stylesheet" href="/src/style/massage.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EasyPrint</div>
+        <nav class="nav-links">
+          <a href="#about">About us</a>
+          <a href="#webcrumbs">Projects</a>
+          <a href="#contact">Contact</a>
+          <script src="https://static.elfsight.com/platform/platform.js" async></script>
+          <div class="elfsight-app-c7727414-789e-4337-b52d-1af7f6f62166" data-elfsight-app-lazy></div>
+        </nav>
+        <div class="header-decor"></div>
+    </header>
+    
+    <div class="background-decor decor1"></div>
+    <div class="background-decor decor2"></div>
+    <div class="background-decor decor3"></div>
+    
+    <div class="parallax"></div>
+    <div class="content">
+        <h1>Welcome to EasyPrint</h1>
+        <p>We offer 3D printing, 3D modeling, and custom 3D printing solutions in Latvia. Order 3D printing today!</p>
+    </div>
+    
+    <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 40px 0; ">
+
+    <section id="webcrumbs">
+        <h2>Projects:</h2>
+        <div id="projects-container">
+        </div>
+    </section>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const projectsContainer = document.getElementById('projects-container');
+            const storedProjects = JSON.parse(localStorage.getItem('projects')) || [];
+            
+            storedProjects.forEach(project => {
+                const div = document.createElement('div');
+                div.classList.add('grid-item');
+                div.innerHTML = `
+                    <img src="${project.imgSrc}" alt="${project.title}" class="image"/>
+                    <p class="image-caption">${project.title}</p>
+                `;
+                projectsContainer.appendChild(div);
+            });
+        });
+    </script>
+       
+
+    <section id="contact" class="hidden">
+        <h2>Contact Information:</h2>
+        <div class="grid">
+            <div class="flex">
+                <i class="fa-brands fa-telegram"></i>
+                <div>
+                    <h3>Telegram</h3>
+                    <p>@Aksal0tel</p>
+                </div>
+            </div>
+            <div class="flex">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+371 200 321 34</p>
+                </div>
+            </div>
+            <div class="flex">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>zmicerevskisaleksejs@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>+371 200 321 34</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <footer>
+        <p>© 2025 EasyPrint. All rights reserved.</p>
+    </footer>   
+
+    <button id="toggle-contact" onclick="toggleContact()">💬</button>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <canvas id="bg"></canvas>
+    <script src="/src/javascript/bg.js"></script>
+    <script src="/src/javascript/motion.js"></script>
+    <script src="/src/javascript/massage.js"></script>
+    <script src="/src/javascript/no-ad.js"></script>
+    <script src="/src/javascript/admin.js"></script>
+</body>
+</html>

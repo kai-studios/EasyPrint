@@ -1,0 +1,120 @@
+#toggle-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0078FF;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    width: 50px;
+    height: 50px;
+}
+
+#toggle-contact:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+}
+
+#toggle-contact.active {
+    background-color: #003f8f;
+    transform: scale(1.1);
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+#contact {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#contact.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+#contact h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: center;
+}
+
+#contact .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px;
+}
+
+#contact .flex {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .flex i,
+#contact .flex span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+#contact .flex:hover {
+    background-color: #e6e6e6;
+    transform: translateY(-3px);
+}
+
+#contact .flex .fa-telegram {
+    color: #0078FF;
+}
+
+#contact .flex .material-symbols-outlined.phone {
+    color: #4CAF50;
+}
+
+#contact .flex .material-symbols-outlined.mail {
+    color: #F44336;
+}
+
+#contact .flex .fa-whatsapp {
+    color: #25D366;
+}
+
+#contact .flex h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+#contact .flex p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+#contact .close-btn {
+    display: none;
+}

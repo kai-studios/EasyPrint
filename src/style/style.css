@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+    overflow-x: hidden;
+    position: relative;
+    height: 200vh; 
+  }
+  
+  .background-decor {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: moveBg 12s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+  
+  .decor1 {
+    top: 10%;
+    left: -100px;
+    animation-delay: 0s;
+  }
+  
+  .decor2 {
+    bottom: 15%;
+    right: -150px;
+    animation-delay: 3s;
+  }
+  
+  .decor3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 6s;
+  }
+  
+  @keyframes moveBg {
+    from {
+      transform: translateY(0) scale(1);
+    }
+    to {
+      transform: translateY(30px) scale(1.1);
+    }
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+  }
+  
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -1; 
+  }
+  
+  
+  .content {
+    margin-top: 20%;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .content p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    margin-top: 0; 
+  }
+  
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0; 
+    margin: 40px 0;
+  }
+
+    .elfsight-app-c7727414-789e-4337-b52d-1af7f6f62166 .elfsight-widget-settings {
+        display: none !important;
+    }
+
+    .elfsight-app-c7727414-789e-4337-b52d-1af7f6f62166 .elfsight-editor-container {
+        display: none !important;
+    }
+
+    header, footer, .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 20vh;
+    }
+    
+
+    a[href*="elfsight.com/website-translator-widget"] {
+      display: none !important;
+    }
+    

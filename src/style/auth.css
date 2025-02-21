@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+#logoutBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #c0392b;
+}
+
+#logoutBtn:focus {
+    outline: none;
+}
+
+#contentList {
+    margin-bottom: 20px;
+}
+
+#contentItems li {
+    list-style-type: none;
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contentItems li button {
+    background-color: #e67e22;
+}
+
+#contentEditor {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contentEditor textarea {
+    min-height: 100px;
+}
+
+#projects-list .project-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#projects-list .project-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+#projects-list .project-item input {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#projects-list .project-item button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#projects-list .project-item button:hover {
+    background-color: #c0392b;
+}
+

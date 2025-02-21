@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPrint Admin</title>
+    <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/style/auth.css">
+</head>
+<body>
+    <div id="loginPage" class="page">
+        <h2>Авторизация</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Логин" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+            <p id="error" class="error"></p>
+        </form>
+    </div>
+
+    <div id="cmsPanel" class="page hidden">
+        <h2>CMS Панель</h2>
+        <button id="logoutBtn">Выйти</button>
+
+        <div id="contentEditor">
+            <h3>Редактировать проекты</h3>
+            <div id="projects-list">
+
+            </div>
+            <button id="addProjectBtn">Добавить проект</button>
+        </div>
+    </div>
+
+    <script src="/src/javascript/auth.js"></script>
+</body>
+</html>
